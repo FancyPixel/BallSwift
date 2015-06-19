@@ -1,5 +1,5 @@
 #What's new in UIDynamics
-This sample app roughly recreates the hoop physics of [Ball King]() using UIDynamics, showcasing the new addition to the API entroduced in iOS 9.
+This sample app roughly recreates the hoop physics of [Ball King](https://itunes.apple.com/us/app/ball-king/id946496840?mt=8) (which is a brilliant time waster, you should try it) using UIDynamics, showcasing the new addition to the API entroduced in iOS 9.
 
 #Setup
 This project requires Xcode 7. Just open the provided .xcodeproj.  
