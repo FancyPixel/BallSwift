@@ -8,12 +8,18 @@
 
 import UIKit
 
+/*
+A UIView with a round body
+*/
 class Ellipse: UIView {
     override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
         return .Ellipse
     }
 }
 
+/*
+A UIImageView with a round body
+*/
 class Ball: UIImageView {
     override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
         return .Ellipse
@@ -56,6 +62,9 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "shoot"))
     }
 
+    /* 
+    Build the hoop, setup the world appearance
+    */
     func buildViews() {
         board = UIView(frame: CGRect(x: hoopPosition.x, y: hoopPosition.y, width: 100, height: 100))
         board.backgroundColor = .whiteColor()
@@ -85,6 +94,9 @@ class ViewController: UIViewController {
         [board, leftHoop, rightHoop, floor, ball, hoop].map({self.view.addSubview($0)})
     }
 
+    /*
+    Setup the behaviors for the world's objects
+    */
     func setupBehaviors() {
         animator?.removeAllBehaviors()
 
@@ -151,10 +163,16 @@ class ViewController: UIViewController {
         animator?.addBehavior(UIGravityBehavior(items: [ball]))
     }
 
+    /*
+    Applies the force to the ball
+    */
     func shoot() {
         animator?.addBehavior(pushForPosition(CGPointZero))
     }
 
+    /*
+    Build the force to apply to the ball
+    */
     func pushForPosition(position: CGPoint) -> UIPushBehavior {
         // Apply an instantaneous push to the ball
         let push = UIPushBehavior(items: [ball], mode: .Instantaneous)
