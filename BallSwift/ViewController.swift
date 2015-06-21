@@ -43,8 +43,6 @@ class ViewController: UIViewController {
     let ball: Ball = {
         let ball = Ball(frame: CGRect(x: 0, y: 0, width: 28, height: 28))
         ball.image = UIImage(named: "ball")
-        ball.layer.cornerRadius = 14
-        ball.backgroundColor = .orangeColor()
         return ball
     }()
 
