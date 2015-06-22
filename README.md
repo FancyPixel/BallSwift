@@ -1,5 +1,7 @@
 #What's new in UIDynamics
-This sample app roughly recreates the hoop physics of [Ball King](https://itunes.apple.com/us/app/ball-king/id946496840?mt=8) (which is a brilliant time waster, you should try it) using UIDynamics, showcasing the new addition to the API introduced in iOS 9.
+This sample app roughly recreates the hoop physics of [Ball King](https://itunes.apple.com/us/app/ball-king/id946496840?mt=8) (which is a brilliant time waster, you should try it) using UIDynamics, showcasing the new addition to the API introduced in iOS 9.  
+
+Read more [here](http://fancypixel.github.io/blog/2015/06/19/playing-with-uidynamics-in-ios-9/).  
 
 <p align="center">
   <img width="500" height="820" src="assets/screenshot.gif"/>
