@@ -98,14 +98,14 @@ class ViewController: UIViewController {
   func setupBehaviors() {
     animator?.removeAllBehaviors()
 
-    let offsets = [
+    let bolts = [
       CGPoint(x: hoopPosition.x + 25, y: hoopPosition.y + 85),
       CGPoint(x: hoopPosition.x + 75, y: hoopPosition.y + 85),
       CGPoint(x: hoopPosition.x + 25, y: hoopPosition.y + 85),
       CGPoint(x: hoopPosition.x + 75, y: hoopPosition.y + 85)]
 
     // Build the board
-    zip([hoop, hoop, leftHoop, rightHoop], offsets).map({
+    zip([hoop, hoop, leftHoop, rightHoop], bolts).map({
       (item, offset) in
       animator?.addBehavior(UIAttachmentBehavior.pinAttachmentWithItem(item, attachedToItem: board, attachmentAnchor: offset))
     })
