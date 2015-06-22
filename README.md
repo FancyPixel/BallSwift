@@ -2,7 +2,7 @@
 This sample app roughly recreates the hoop physics of [Ball King](https://itunes.apple.com/us/app/ball-king/id946496840?mt=8) (which is a brilliant time waster, you should try it) using UIDynamics, showcasing the new addition to the API introduced in iOS 9.
 
 <p align="center">
-  <img width="400" height="240" src="assets/screenshot.gif"/>
+  <img width="500" height="820" src="assets/screenshot.gif"/>
 </p>
 
 #Setup
