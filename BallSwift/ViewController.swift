@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     hoop.backgroundColor = UIColor(red: 177.0/255.0, green: 25.0/255.0, blue: 25.0/255.0, alpha: 1)
     hoop.layer.cornerRadius = 3
 
-    [board, leftHoop, rightHoop, floor, ball, hoop].map({self.view.addSubview($0)})
+    [board, leftHoop, rightHoop, floor, ball, hoop].forEach({self.view.addSubview($0)})
   }
 
   /*
@@ -105,7 +105,7 @@ class ViewController: UIViewController {
       CGPoint(x: hoopPosition.x + 75, y: hoopPosition.y + 85)]
 
     // Build the board
-    zip([hoop, hoop, leftHoop, rightHoop], bolts).map({
+    zip([hoop, hoop, leftHoop, rightHoop], bolts).forEach({
       (item, offset) in
       animator?.addBehavior(UIAttachmentBehavior.pinAttachmentWithItem(item, attachedToItem: board, attachmentAnchor: offset))
     })
